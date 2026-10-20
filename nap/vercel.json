@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "functions": {
+    "api/nap.ts": { "maxDuration": 60 }
+  },
+  "rewrites": [{ "source": "/n/:id", "destination": "/api/n/:id" }],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "x-content-type-options", "value": "nosniff" },
+        { "key": "referrer-policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

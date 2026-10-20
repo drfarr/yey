@@ -3,7 +3,7 @@
     "target": "ES2022",
     "module": "commonjs",
     "moduleResolution": "node",
-    "lib": ["ES2022"],
+    "lib": ["ES2022", "DOM"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -11,5 +11,5 @@
     "types": ["node"],
     "outDir": "dist"
   },
-  "include": ["src", "test"]
+  "include": ["src", "api", "scripts", "test"]
 }
