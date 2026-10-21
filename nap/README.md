@@ -15,6 +15,10 @@ Built on Claude (`claude-opus-5-5`) with structured outputs, so the response is 
 
 ## Deploy to Vercel
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdrfarr%2Fyey%2Ftree%2Fmain%2Fnap&project-name=nap&repository-name=nap&env=ANTHROPIC_API_KEY&envDescription=Anthropic%20API%20key%20nap%20uses%20to%20read%20things%20for%20you&envLink=https%3A%2F%2Fplatform.claude.com%2F)
+
+The button clones `nap/` into a new repo on your account and prompts for the API key. Then add Upstash Redis from the project's Storage tab. To deploy this repo directly instead:
+
 1. Import this repo in Vercel and set the **Root Directory** to `nap`. The framework preset is "Other".
 2. Add the **Upstash Redis** integration from the Vercel Marketplace (Storage tab). It sets the `UPSTASH_REDIS_REST_*` or `KV_REST_API_*` variables nap looks for. Without it, share links and rate limits live in process memory and reset on cold starts.
 3. Set `ANTHROPIC_API_KEY` in the project's environment variables.
